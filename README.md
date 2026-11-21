@@ -40,4 +40,4 @@ This template builds from this repo. When the pinned ArcReel version changes her
 
 ## License
 
-ArcReel is AGPL-3.0 ([upstream license](https://github.com/ArcReel/ArcReel/blob/main/LICENSE)). The wrapper files in this repo are MIT.
+ArcReel is AGPL-3.0 ([upstream license](https://github.com/ArcReel/ArcReel/blob/main/LICENSE)).
