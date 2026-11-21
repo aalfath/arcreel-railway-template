@@ -1,0 +1,21 @@
+# Local test only (same variables as the Railway template). Not used by Railway.
+services:
+  postgres:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: testpass
+      POSTGRES_DB: railway
+    volumes: [pgdata:/var/lib/postgresql]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U postgres"], interval: 5s, retries: 10}
+  arcreel:
+    build: .
+    environment:
+      PORT: "8080"
+      DATABASE_URL: postgresql://postgres:testpass@postgres:5432/railway
+      AUTH_USERNAME: admin
+      AUTH_PASSWORD: local-test-password-123
+    ports: ["8080:8080"]
+    volumes: [data:/data]
+    depends_on: {postgres: {condition: service_healthy}}
+volumes: {pgdata: {}, data: {}}
