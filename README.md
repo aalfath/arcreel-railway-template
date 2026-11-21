@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/arcreel?utm_medium=integration&utm_source=button&utm_campaign=arcreel)
+
 # ArcReel on Railway
 
 Railway template for [ArcReel](https://github.com/ArcReel/ArcReel), an open-source, self-hosted AI video workspace. It turns novels and scripts into characters, scenes, props, storyboards, videos and CapCut/JianYing drafts, with an AI agent, many model providers and cost tracking.
